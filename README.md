@@ -33,7 +33,7 @@ SciPy (scipy)
 ```
 ### Helper Files:
 1. COMBINED333_LR_Distance_MULTIPLICATION_MASK.csv
-   - Used for diatance censoring (See Figure 6A).
+   - Used for distance censoring of participant z-transformed matrix (See Figure 6A).
    - NOTE: Only valid for data in Conte69_fs_LR space. (If using a different surface space, a distance multiplication mask will need to be made from that surface with combined hemispheres) 
 2. Gordon333_TEMPLATE.pscalar.nii
    - Used as a template to save density map pscalar.nii data. 
