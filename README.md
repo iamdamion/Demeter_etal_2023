@@ -47,12 +47,12 @@ SciPy (scipy)
     - /final_hubs_dlabels/ - dlabel.nii files with shaded hub parcels, used for visualization
 
 2. Hub_Density_Map.py
-  - /<name>_Gordon333_Hub_Counts.txt - Cumulative count of how many hubs were identified for each parcel
-  - /<name>_hubs_density_map.pscalar.nii - Hub density map for viewing in workbench view
+   - /<name>_Gordon333_Hub_Counts.txt - Cumulative count of how many hubs were identified for each parcel
+   - /<name>_hubs_density_map.pscalar.nii - Hub density map for viewing in workbench view
  
 3. Create_Hub_Profiles.py
-  - /final_conn_profiles/ - Hub profiles, per subID, for all identified hubs. (Figure 6 (b))
-  - /<name>_Hub_Profile_Correlations.png - Hub profile correlation matrix plot (Not very useful until after profile clustering)
+   - /final_conn_profiles/ - Hub profiles, per subID, for all identified hubs. (Figure 6 (b))
+   - /<name>_Hub_Profile_Correlations.png - Hub profile correlation matrix plot (Not very useful until after profile clustering)
 
 
 - Beyond this, see the -h (help) argument in the scripts for full details of required arguments. 
