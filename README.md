@@ -16,9 +16,11 @@ Damion V. Demeter*, Evan M. gordon, Tehila Nugiel, AnnaCarolina Garza, Tyler L. 
   - This script identifies hub parcels and associated files.
 - Hub Density Map Creation Script: Hub_Denisty_Map.py
   - This script creates a hub density map across all participants.
+  - As in Figure 1 (A)
 - Hub Profiles Script: Create_Hub_Profiles.py
   - This script creates hub profiles and a hub profile correlation matrix that can be used to cluster hub profiles into categories.
   - We recommend using the Louvain algorithm and methods described in this paper to identify hub categories, but other clustering methods can be used with this output.
+  - The optional correlation matrix plot isn't as useful until after hub category clustering, but can be used to make a matrix as in Figure S3 (B). 
 
 ### Python Requirements: these scripts are written in python 3.9.7.
 - Python package requirements:
@@ -40,6 +42,7 @@ SciPy (scipy)
 1. Identify_Hubs.py
   - 3 folders with your final data.
     - /final_avg_pc_percs/ - Average participation coefficient percentile for each cortical hub (In Gordon 333 set parcel number order)
+    - /final_csv_outputs/ - All distance censored zmat files
     - /final_hub_indices/ - Parcel indices (Parcel #) for parcels identified as a hub 
     - /final_hubs_dlabels/ - dlabel.nii files with shaded hub parcels, used for visualization
 
@@ -47,9 +50,9 @@ SciPy (scipy)
   - /<name>_Gordon333_Hub_Counts.txt - Cumulative count of how many hubs were identified for each parcel
   - /<name>_hubs_density_map.pscalar.nii - Hub density map for viewing in workbench view
  
- 
 3. Create_Hub_Profiles.py
-
+  - /final_conn_profiles/ - Hub profiles, per subID, for all identified hubs. (Figure 6 (b))
+  - /<name>_Hub_Profile_Correlations.png - Hub profile correlation matrix plot (Not very useful until after profile clustering)
 
 
 - Beyond this, see the -h (help) argument in the scripts for full details of required arguments. 
