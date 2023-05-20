@@ -12,9 +12,13 @@ Damion V. Demeter*, Evan M. gordon, Tehila Nugiel, AnnaCarolina Garza, Tyler L. 
 ## <p align="center">**Scripts and other resources for replication of this work**</p>   
 
 ### Scripts:
-- Cortical Hub Identification Script: Identify_Hubs.py   
+- Cortical Hub Identification Script: Identify_Hubs.py
+  - This script identifies hub parcels and associated files.
 - Hub Density Map Creation Script: Hub_Denisty_Map.py
-- Hub Categorization Script: Categorize_Hubs.py
+  - This script creates a hub density map across all participants.
+- Hub Profiles Script: Create_Hub_Profiles.py
+  - This script creates hub profiles and a hub profile correlation matrix that can be used to cluster hub profiles into categories.
+  - We recommend using the Louvain algorithm and methods described in this paper to identify hub categories, but other clustering methods can be used with this output.
 
 ### Python Requirements: these scripts are written in python 3.9.7.
 - Python package requirements:
@@ -41,7 +45,7 @@ SciPy (scipy)
 2. Hub_Density_Map.py
  
  
-3. Categorize_Hubs.py
+3. Create_Hub_Profiles.py
 
 
 
