@@ -23,11 +23,7 @@ Brain Connectivity Toolbox for Python (bct)
 NetworkX (networkx)
 NiBabel (nibabel)
 Numpy (numpy)
-SciPy (scipy)
-
-Other Requirements:
-Fully processed, motion censored, etc (appropriate for your processing pipeline) timeseries exported to .txt file. 
-- 
+SciPy (scipy) 
 ```
 ### Other Requirements:
 - Timeseries should be fully processed, motion corrected, etc (appropriate steps for your chosen processing pipeline). This current script requires that timeseries are created from the [Gordon 333 Parcel set](https://balsa.wustl.edu/2Vm69) and exported to a .txt file. (This script does NOT handle vertex-wise data)
