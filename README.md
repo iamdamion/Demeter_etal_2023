@@ -39,6 +39,9 @@ SciPy (scipy)
     - /final_hubs_dlabels/ - dlabel.nii files with shaded hub parcels, used for visualization
 
 2. Hub_Density_Map.py
+ 
+ 
+3. Categorize_Hubs.py
 
 
 
