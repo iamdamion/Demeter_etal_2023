@@ -31,6 +31,15 @@ NiBabel (nibabel)
 Numpy (numpy)
 SciPy (scipy) 
 ```
+### Helper Files:
+1. COMBINED333_LR_Distance_MULTIPLICATION_MASK.csv
+   - Used for diatance censoring (See Figure 6A).
+   - NOTE: Only valid for data in Conte69_fs_LR space. (If using a different surface space, a distance multiplication mask will need to be made from that surface with combined hemispheres) 
+2. Gordon333_TEMPLATE.pscalar.nii
+   - Used as a template to save density map pscalar.nii data. 
+3. Parcels_LR.dlabel.nii
+   - Used for numbering, location, etc of Gordon 333 parcels.
+   
 ### Other Requirements:
 1. Timeseries should be fully processed, motion corrected, etc (appropriate steps for your chosen processing pipeline). This current script requires that timeseries are created from the [Gordon 333 Parcel set](https://balsa.wustl.edu/2Vm69) and exported to a .txt file. (This script does NOT handle vertex-wise data)
    - .txt file format should be 333 rows by X time/TR of scan, exported to .txt file using the [Gordon 333 Cortical Parcel set](https://balsa.wustl.edu/2Vm69)
