@@ -82,6 +82,7 @@ def main(argv=sys.argv):
             input_data = [i for i in input_data if i]
     except FileNotFoundError:
         sys.exit(f'Input data file not found. Check path: {args.inputlist}')
+    logger.debug(f'IDs and Paths imported: {args.inputlist}')
     # create temporary file structure
     out_subdirs = ['pajek_files','infomap_outputs','pc_outputs','csv_outputs',
                    'final_avg_pc_percs','final_hub_indices','final_hubs_dlabels']
@@ -94,13 +95,17 @@ def main(argv=sys.argv):
                 os.makedirs(sdir)
     else:
         sys.exit(f'Output dir not found. Please check: {args.outdir}')
+    logger.debug(f'Output Dir: {args.outdir}')
     # handle basic overlay colors
     if args.overlay == 1:
         overlay_color = (1,0.07843,0.57647,1) # pink
+        logger.debug(f'Hub Overlay Color: Pink')
     elif args.overlay == 2:
         overlay_color = (0.8627,0.07843,0.23529,1) # crimson
+        logger.debug(f'Hub Overlay Color: Crimson')
     elif args.overlay == 3:
         overlay_color = (0,1,0,1) # lime
+        logger.debug(f'Hub Overlay Color: Lime')
 
     logger.debug('------------------------- end ------------------------------------\n')
     ## global vars
