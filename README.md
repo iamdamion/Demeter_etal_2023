@@ -30,19 +30,22 @@ Numpy (numpy)
 SciPy (scipy) 
 ```
 ### Other Requirements:
-- Timeseries should be fully processed, motion corrected, etc (appropriate steps for your chosen processing pipeline). This current script requires that timeseries are created from the [Gordon 333 Parcel set](https://balsa.wustl.edu/2Vm69) and exported to a .txt file. (This script does NOT handle vertex-wise data)
+1. Timeseries should be fully processed, motion corrected, etc (appropriate steps for your chosen processing pipeline). This current script requires that timeseries are created from the [Gordon 333 Parcel set](https://balsa.wustl.edu/2Vm69) and exported to a .txt file. (This script does NOT handle vertex-wise data)
  - .txt file format should be 333 rows by X time/TR of scan, exported to .txt file using the [Gordon 333 Cortical Parcel set](https://balsa.wustl.edu/2Vm69)
  - .txt files can be created from dense timeseries files (.dtseries.nii) by using the "wb_command -cifti-parcellate" command from [Connectome Workbench](https://www.humanconnectome.org/software/workbench-command)
-- A .txt file for your participant list is required that has (space separated) <participant ID> <path to timeseries.txt file>. (see example in this repository for format)
+2. A .txt file for your participant list is required that has (space separated) <participant ID> <path to timeseries.txt file>. (see example in this repository for format)
+3. Infomap should be installed locally and able to be called from the command line. (Tested with infomap versions 1.9.0 & 2.6.0 - Other versions may need adjusted clu file editing.)  
 
 ### Basic Outputs:
 1. Identify_Hubs.py
   - 3 folders with your final data.
     - /final_avg_pc_percs/ - Average participation coefficient percentile for each cortical hub (In Gordon 333 set parcel number order)
-    - /final_hub_indices/ - Parcel indicies (Parcel #) for parcels identified as a hub 
+    - /final_hub_indices/ - Parcel indices (Parcel #) for parcels identified as a hub 
     - /final_hubs_dlabels/ - dlabel.nii files with shaded hub parcels, used for visualization
 
 2. Hub_Density_Map.py
+  - /<name>_Gordon333_Hub_Counts.txt - Cumulative count of how many hubs were identified for each parcel
+  - /<name>_hubs_density_map.pscalar.nii - Hub density map for viewing in workbench view
  
  
 3. Create_Hub_Profiles.py
