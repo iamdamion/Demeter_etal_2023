@@ -1,0 +1,2 @@
+sub-subid01 /path/to/fully/processed/Gordon_333_PARCEL_ORDERED_TIMESERIES.txt
+sub-subid02 /path/to/fully/processed/Gordon_333_PARCEL_ORDERED_TIMESERIES.txt

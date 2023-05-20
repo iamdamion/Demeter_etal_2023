@@ -84,7 +84,7 @@ def main(argv=sys.argv):
         sys.exit(f'Input data file not found. Check path: {args.inputlist}')
     logger.debug(f'IDs and Paths imported: {args.inputlist}')
     # create temporary file structure
-    out_subdirs = ['pajek_files','infomap_outputs','pc_outputs','csv_outputs',
+    out_subdirs = ['pajek_files','infomap_outputs','pc_outputs','final_csv_outputs',
                    'final_avg_pc_percs','final_hub_indices','final_hubs_dlabels']
     if os.path.isdir(args.outdir):
         for osub in out_subdirs:
@@ -127,7 +127,7 @@ def main(argv=sys.argv):
         dist_censored_zmat = dist_censored_zmat * mult_mat
         dist_censored_zmat[dist_censored_zmat==-0]=0 # correct -0 for aesthetics
         # save distance censored csvs for later steps
-        csv_dir = os.path.join(args.outdir,'csv_outputs')
+        csv_dir = os.path.join(args.outdir,'final_csv_outputs')
         if os.path.isdir(csv_dir):
             pass
         else:
@@ -206,7 +206,7 @@ def main(argv=sys.argv):
         ## Step 6,7,8, and 9: Calc PC, get percents, censor out low degree nodes, get average percent, and save as file. 
         logger.debug(f'  -Load distance censored zmat')
         orig_distcensored_mat_path = os.path.join(args.outdir,
-                                                  'csv_outputs',
+                                                  'final_csv_outputs',
                                                   subid + '_DIST_CENSORED_ZMAT.csv')
         orig_dist_censored_zmat = np.genfromtxt(orig_distcensored_mat_path, delimiter=',')
         pc_outputs_dir = os.path.join(args.outdir,'pc_outputs')
